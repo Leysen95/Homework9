@@ -21,7 +21,7 @@ public class Main {
                 maxSalary = weekSalary[i];
             }
             if (weekSalary[i] < minSalary) {
-                minSalary = workerSalaries[i];
+                minSalary = weekSalary[i];
             }
         }
         System.out.printf("Минимальная сумма трат за неделю составила %s рублей. Максимальная сумма трат за неделю составила %s рублей", minSalary, maxSalary);
@@ -37,12 +37,9 @@ public class Main {
         System.out.println();
 
         System.out.println("Task 4");
-        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = 0; i < reverseFullName.length / 2; i++) {
-            char temp = reverseFullName[i];
-           reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
-           reverseFullName[reverseFullName.length - 1 - i] = temp;
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I' };
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
-        System.out.println(Arrays.toString(reverseFullName));
     }
 }
